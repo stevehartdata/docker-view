@@ -1,0 +1,61 @@
+/*.image > section {
+  display: none;
+}*/
+
+html {
+  width: 100%;
+}
+
+dt, dd {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  vertical-align: top;
+  margin-left: 0px;
+  overflow: auto;
+}
+
+dt {
+  width: 100%;
+  font-weight: bold;
+}
+
+dt[title] {
+  text-decoration: underline dotted;
+}
+
+dt[title]:hover {
+  cursor: help;
+}
+
+section.image {
+  border: medium solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.sidebar {
+  background: white;
+  border: solid thin black;
+  padding: 10px 2.5px;
+  margin: 10px 5px;
+}
+
+.sidebar > h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#suggested-images button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: blue;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#suggested-images button:hover {
+  color: red;
+  cursor: pointer;
+}

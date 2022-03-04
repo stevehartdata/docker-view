@@ -1,0 +1,148 @@
+Docker Image dotnet/framework/runtime:4.8
+
+This image supports the following platforms:
+  -- Only output this if the image manifest is a manifest list. Otherwise, skip the headings for each platform and only output information about the actual image.
+
+  Windows 10.0.14393.4889 on amd64
+
+
+  Windows 10.0.17763.2458 on amd64
+
+
+  Windows 10.0.19042.1469 on amd64
+
+
+  Windows 10.0.20348.473 on amd64
+    -- A unique 64 character identifier of the image (this is assigned randomly at image creation)
+    ID: 
+
+    -- Parent is the ID of the parent image
+    Parent:
+
+    -- Comment is the commit message that was set when committing the image
+    Comment:
+
+    -- Created is the timestamp at which the image was created
+    Created:
+
+    -- DockerVersion specifies the version of Docker that was used to build the image
+    DockerVersion:
+
+    -- Author is the name of the author that was specified when committing the image
+    Author:
+
+    -- Size: is the total size of the image including all layers it is composed of
+    Size:
+
+    About the Platform this Image Can Run on
+    ----------------------------------------
+
+    -- Architecture is the hardware that the image is built and runs on
+    Architecture: amd64
+
+    -- Variant is the CPU architecture variable (presently ARM-only)
+    Variant:
+
+    -- OS is the operating system used to build and run the image
+    OS:
+
+    OSVersion:
+    OSFeatures:
+
+    Default Configuration for Containers Based on this Image
+    --------------------------------------------------------
+
+      (this config controls how Docker starts a container based on this image)
+      - Hostname:
+      - Domainname:
+      -- User that will run the command(s) inside the container, also support user:group
+      - User:
+      - AttachSdin: false
+      - AttachStdout: false
+      - AttachStderr: false
+      - ExposedPorts
+      -- Attach standard streams to a tty, including stdin if it is not closed.
+      - Tty: false
+      - OpenStdin: false
+      -- If true, close stdin after the 1 attached client disconnects.
+      - StdinOnce: false
+      - Env:
+          - DOTNET_RUNNING_IN_CONTAINER=true
+          - COMPLUS_RUNNING_IN_CONTAINER=1
+          - COMPLUS_NGenProtectedProcess_FeatureEnabled=0
+      -- Command to run when starting the container
+      - Cmd: c:\windows\system32\cmd.exe
+      -- Healthcheck describes how to check the container is healthy
+      - Healthcheck:
+      -- True if command is already escaped (meaning treat as a command line) (Windows specific).
+      - ArgsEscaped:
+      -- Name of the image as it was passed by the operator (e.g. could be symbolic)
+      - Image: sha256:dd5606bf3f88dfa87433b70e6171d2bd670b3c025031a59d685d1f278092e2d
+      - Volumes: null
+      - WorkingDir:
+      -- Entrypoint to run when starting the container
+      - Entrypoint: null
+      - NetworkDisabled:
+      - MacAddress:
+      -- ONBUILD metadata that were defined on the image Dockerfile
+      - OnBuild: null
+      -- List of labels set to this container
+      - Labels: null
+      -- Signal to stop a container
+      - StopSignal:
+      -- Timeout (in seconds) to stop a container
+      - StopTimeout:
+      -- Shell for shell-form of RUN, CMD, ENTRYPOINT
+      - Shell:
+
+
+    Filesystem Layers
+    -----------------
+
+    Layers:
+      - Base layer (1.2 GiB)
+          -- Link to download the file: https://mcr.microsoft.com/v2/windows/servercore/blobs/sha256:8f616e6e9eec767c425fd9346648807d1b658d20ff6097be1d955aac69c26642
+          -- Indicate the first layer is the base.
+          -- The sizes here are the download size, not the size after decompression.
+
+          Created: January 16, 2022 5:18:24 UTC
+          Created By: Apply image 2022-RTM-amd64
+      - Layer 2 (912 MiB)
+          -- Link to download the file: https://mcr.microsoft.com/v2/windows/servercore/blobs/sha256:0e02c12b1310e6c76c29fcd6f81905400fdb6a01caac9dc825939ad004baffef
+
+          Created: January 16, 2022 5:17:24 UTC
+          Created By: Install update ltsc2022-amd64
+      - Layer 3 (1.2 KiB)
+          -- Link to download the file: https://mcr.microsoft.com/v2/dotnet/framework/runtime/blobs/sha256:f94ef47a84f46e8e28326512d80fdbf10db580baf7720e59529919174cd708d9
+
+          Created: January 20, 2022 00:10:21 UTC
+          Created By: cmd /S /C #(nop)  ENV DOTNET_RUNNING_IN_CONTAINER=true COMPLUS_RUNNING_IN_CONTAINER=1 COMPLUS_NGenProtectedProcess_FeatureEnabled=0
+      - Layer 4 (213 MiB)
+          -- Link to download the file: https://mcr.microsoft.com/v2/dotnet/framework/runtime/blobs/sha256:365aab1b67776659055cf1f123d64b106edeaea9d524fe21f58f03799252c1ad
+
+          Created: January 20, 2022 00:16:34 UTC
+          Created By: cmd /S /C curl -fSLo patch.msu https://download.microsoft.com/download/5/a/4/5a4425d3-eb10-47a8-afe0-b07a19b20b1c/Windows10.0-KB9008395-x64-NDP48.msu     \u0026\u0026 mkdir patch     \u0026\u0026 expand patch.msu patch -F:*     \u0026\u0026 del /F /Q patch.msu     \u0026\u0026 dism /Online /Quiet /Add-Package /PackagePath:C:\\patch\\windows10.0-kb9008395-x64-ndp48.cab     \u0026\u0026 rmdir /S /Q patch         \u0026\u0026 %windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen install \"Microsoft.PowerShell.Utility.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\"     \u0026\u0026 %windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen update     \u0026\u0026 %windir%\\Microsoft.NET\\Framework\\v4.0.30319\\ngen update
+
+
+    About the Container Used to Build this Image
+    --------------------------------------------
+
+    -- Container is the ID of the container used to commit
+    Container:
+
+    -- The rest is populated from container_config (same structure as main config for a container)
+
+    - Hostname:
+    - Domainname:
+    ...
+
+
+
+
+
+
+TODO:
+
+- Provide Windows version names instead of just numbers.
+- Indicate server compatibility for platforms.
+- Indicate the media type for the layers

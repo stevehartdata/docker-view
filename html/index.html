@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Docker Image Viewer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="styles-desktop.css">
+</head>
+<body>
+  <h1 id="page-title">Docker Image Viewer: dotnet/framework/runtime:4.8</h1>
+  <form id="new-image-form" class="sidebar">
+    <h2>View Another Image</h2>
+    <label for="new-image-name">Image Name</label>
+    <input id="new-image-name" type="text" name="i" />
+    <button type="submit">View</button>
+  </form>
+  <section class="main">
+    <section class="platforms">
+      This image supports the following platforms:
+      <section class="image">
+        <h2>Windows 10.0.14393.4889 on amd64</h2>
+      </section>
+      <section class="image">
+        <h2>Windows 10.0.17763.2458 on amd64</h2>
+      </section>
+      <section class="image">
+        <h2>Windows 10.0.19042.1469 on amd64</h2>
+      </section>
+      <section class="image">
+        <h2>Windows 10.0.20348.473 on amd64</h2>
+        <section class="overview">
+          <dl>
+            <div>
+              <dt>ID</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Parent</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Comment</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Created</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Docker Version</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Author</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Size</dt><dd class="value"></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="image-platform">
+          <h3>About the Platform This Image Can Run On</h3>
+
+          <dl>
+            <div>
+              <dt>Architecture</dt><dd class="value">amd64</dd>
+            </div>
+
+            <div>
+              <dt>Variant</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>OS</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>OS Version</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>OS Features</dt><dd class="value"></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="image-default-config">
+          <h3>Default Configuration for Containers Based on This Image</h3>
+
+          <p>This configuration controls how Docker starts a container based on this image.</p>
+
+          <dl>
+            <div>
+              <dt>Host Name</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Domain Name</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>User</dt><dd class="desc">The user that will run the command(s) inside the container. A group can also be specified, as in user:group.</dd><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Attach STDIN</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Attach STDOUT</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Attach STDERR</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Exposed Ports</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>TTY</dt><dd class="desc">Attach standard streams to a TTY, including stdin if it is not closed.</dd><dd class="value">false</dd>
+            </div>
+
+            <div>
+              <dt>Open STDIN</dt><dd class="value">false</dd>
+            </div>
+
+            <div>
+              <dt>STDIN Once</dt><dd class="desc">Automatically close STDIN after a single attached client disconnects.</dd><dd class="value">false</dd>
+            </div>
+
+            <div>
+              <dt>Environment Variables</dt><dd class="desc">Environment variables to set for the commands that will run in the container.</dd><dd class="value">
+                <ul>
+                  <li>DOTNET_RUNNING_IN_CONTAINER=true</li>
+                  <li>COMPLUS_RUNNING_IN_CONTAINER=1</li>
+                  <li>COMPLUS_NGenProtectedProcess_FeatureEnabled=0</li>
+                </ul>
+              </dd>
+            </div>
+
+            <div>
+              <dt>Command</dt><dd class="desc">The command to run when starting the container.</dd><dd class="value">c:\windows\system32\cmd.exe</dd>
+            </div>
+
+            <div>
+              <dt>Health Check</dt><dd class="desc">Describes how to check the container's health.</dd><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Args Escaped</dt><dd class="desc">For Windows containers, indicates whether the command is already escaped. If it is, then it will be treated as a command line.</dd><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Image</dt><dd class="desc">Name of the image as it was passed by the operator.</dd><dd class="value">sha256:dd5606bf3f88dfa87433b70e6171d2bd670b3c025031a59d685d1f278092e2d</dd>
+            </div>
+
+            <div>
+              <dt>Volumes</dt><dd class="value">null</dd>
+            </div>
+
+            <div>
+              <dt>Working Directory</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Entrypoint</dt><dd class="desc">Entrypoint to run when starting the container.</dd><dd class="value">null</dd>
+            </div>
+
+            <div>
+              <dt>Networking Disabled</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>MAC Address</dt><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>ONBUILD</dt><dd class="desc">ONBUILD metadata that were defined on the image Dockerfile.</dd><dd class="value">null</dd>
+            </div>
+
+            <div>
+              <dt>Labels</dt><dd class="desc">List of labels set for this container</dd><dd class="value">null</dd>
+            </div>
+
+            <div>
+              <dt>Stop Signal</dt><dd class="desc">Signal to stop the container.</dd><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Stop Timeout</dt><dd class="desc">Timeout (in seconds) before the container will be stopped.</dd><dd class="value"></dd>
+            </div>
+
+            <div>
+              <dt>Shell</dt><dd class="desc">The shell to use for the shell form of RUN, CMD, and ENTRYPOINT.</dd><dd class="value"></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section>
+          <h3>Filesystem Layers</h3>
+
+          <ol>
+            <li><a href="https://mcr.microsoft.com/v2/windows/servercore/blobs/sha256:8f616e6e9eec767c425fd9346648807d1b658d20ff6097be1d955aac69c26642">Base Layer</a> (1.2 GiB)
+              <dl>
+                <div>
+                  <dt>Created</dt><dd class="value">January 16, 2022 5:18:24 UTC</dd>
+                </div>
+
+                <div>
+                  <dt>Created By</dt><dd class="value">Apply image 2022-RTM-amd64</dd>
+                </div>
+              </dl>
+            </li>
+
+            <li><a href="https://mcr.microsoft.com/v2/windows/servercore/blobs/sha256:0e02c12b1310e6c76c29fcd6f81905400fdb6a01caac9dc825939ad004baffef">Layer 2</a> (912 MiB)
+              <dl>
+                <div>
+                  <dt>Created</dt><dd class="value">January 16, 2022 5:17:24 UTC</dd>
+                </div>
+
+                <div>
+                  <dt>Created By</dt><dd class="value">Install update ltsc2022-amd64</dd>
+                </div>
+              </dl>
+            </li>
+
+            <li><a href="https://mcr.microsoft.com/v2/dotnet/framework/runtime/blobs/sha256:f94ef47a84f46e8e28326512d80fdbf10db580baf7720e59529919174cd708d9">Layer 3</a> (1.2 KiB)
+              <dl>
+                <div>
+                  <dt>Created</dt><dd class="value">January 20, 2022 00:10:21 UTC</dd>
+                </div>
+
+                <div>
+                  <dt>Created By</dt><dd class="value">cmd /S /C #(nop)  ENV DOTNET_RUNNING_IN_CONTAINER=true COMPLUS_RUNNING_IN_CONTAINER=1 COMPLUS_NGenProtectedProcess_FeatureEnabled=0</dd>
+                </div>
+              </dl>
+            </li>
+
+            <li><a href="https://mcr.microsoft.com/v2/dotnet/framework/runtime/blobs/sha256:365aab1b67776659055cf1f123d64b106edeaea9d524fe21f58f03799252c1ad">Layer 4</a> (213 MiB)
+              <dl>
+                <div>
+                  <dt>Created</dt><dd class="value">January 20, 2022 00:16:34 UTC</dd>
+                </div>
+
+                <div>
+                  <dt>Created By</dt><dd class="value">cmd /S /C curl -fSLo patch.msu https://download.microsoft.com/download/5/a/4/5a4425d3-eb10-47a8-afe0-b07a19b20b1c/Windows10.0-KB9008395-x64-NDP48.msu     \u0026\u0026 mkdir patch     \u0026\u0026 expand patch.msu patch -F:*     \u0026\u0026 del /F /Q patch.msu     \u0026\u0026 dism /Online /Quiet /Add-Package /PackagePath:C:\\patch\\windows10.0-kb9008395-x64-ndp48.cab     \u0026\u0026 rmdir /S /Q patch         \u0026\u0026 %windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen install \"Microsoft.PowerShell.Utility.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\"     \u0026\u0026 %windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen update     \u0026\u0026 %windir%\\Microsoft.NET\\Framework\\v4.0.30319\\ngen update</dd>
+                </div>
+              </dl>
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>About the Container Used to Build This Image</h3>
+
+          Coming Soon
+        </section>
+      </section>
+    </section>
+  </section>
+</body>
+</html>

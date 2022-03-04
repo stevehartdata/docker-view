@@ -1,0 +1,51 @@
+cabal-version: 2.2
+name: docker-image-viewer
+version: 0.0
+
+library
+  hs-source-dirs: lib
+  default-language: Haskell2010
+  ghc-options: -Wall
+  build-depends: base, aeson, attoparsec, bytestring, containers, either, exceptions, http-client >= 0.7.8, http-types, mtl, network-uri, text, time, transformers
+  exposed-modules:
+    Docker
+    Docker.ContainerConfig
+    Docker.Fetch
+    Docker.Fetch.Parsing
+    Docker.FSLayer
+    Docker.Platform
+    Docker.SingleDockerImage
+  other-modules:
+    Docker.DockerImage
+    Docker.Fetch.Http
+    Docker.Fetch.ImageConfig
+    Docker.Fetch.ImageManifestReference
+    Docker.Fetch.ManifestV2
+    Docker.Fetch.MediaTypes
+    Docker.Fetch.OAuthContext
+    Docker.Fetch.Urls
+    Docker.FullyQualifiedImageName
+    Docker.Registry
+    Docker.Repository
+
+executable docker-image-viewer
+  hs-source-dirs: src
+  main-is: Main.hs
+  default-language: Haskell2010
+  ghc-options: -Wall
+  other-modules: App, Render
+  build-depends: base, bytestring, blaze-html, blaze-markup, docker-image-viewer, http-client, http-client-tls, http-types, mtl, neat-interpolation, text, time, wai, warp
+
+test-suite integration-tests
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: IntegrationTests.hs
+  default-language: Haskell2010
+  build-depends: base, docker-image-viewer, http-client, http-client-tls, mtl
+
+test-suite unit-tests
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: UnitTests.hs
+  default-language: Haskell2010
+  build-depends: base, docker-image-viewer, HUnit, neat-interpolation, text

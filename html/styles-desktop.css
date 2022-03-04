@@ -1,0 +1,28 @@
+/*.image > section {
+  display: none;
+}*/
+
+html {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 768px;
+}
+
+dt {
+  width: 25%;
+  padding-right:5px;
+}
+
+dd.value {
+  width:75%;
+}
+
+.sidebar {
+  clear:right;
+  float: right;
+  max-width: 400px;
+}
+
+#page-title, .main {
+  max-width: 768px;
+}
